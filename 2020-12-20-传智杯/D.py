@@ -2,7 +2,7 @@ n = int(input())
 files = []
 
 for i in range(n):
-    s = input().split()
+    s = input().strip('\n\r').split()
     if len(s) == 2:
         if s[0] == 'touch' and s[1] not in files:
             files.append(s[1])
