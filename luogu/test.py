@@ -1,5 +1,3 @@
-def f(x, y=1, z=2):
-    return x + y / z
-
-
-print(f(1, z=2, y=3))
+a = int(input().strip('\n\r'))
+b = int(input().strip('\n\r'))
+print(a + b)
