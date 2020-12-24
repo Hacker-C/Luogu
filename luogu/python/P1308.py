@@ -1,23 +1,22 @@
-# 未完成...
 word = input().strip('\n\r').lower()
-ss = input().strip('\n\r').lower()
-
-sss = list(ss)
-lst = ss.split()
-
-l = len(word)
-
-if word in lst:
-    print(lst.count(word), end=' ')
-    if ''.join(sss[0:l]) == word and ss[l] == ' ':
-        print(0)
-    else:
-        for i in range(1, len(sss)-l):
-            if ''.join(sss[i:i+l]) == word and sss[i-1] == ' ' and sss[i+l+1] == ' ':
-                print(i)
-                exit(0)
-        if ''.join(sss[l-1:]) == word:
-            print(len(sss)-l+1)
-            exit(0)
-else:
+l = input().strip('\n\r').lower()
+x = ' ' + word + ' '
+ans1 = 0
+i1 = i2 = i3 = 1000010
+length = len(word)
+if l[:length+1] == word + ' ':
+    ans1 += 1
+    i1 = 0
+if l[len(l) - length+1:] == ' ' + word:
+    ans1 += 1
+    i2 = len(l) - length
+for i in range(len(l)):
+    if l[i:i+length] == word and l[i-1] == ' ' and l[i+length] == ' ':
+        ans1 += 1
+if x in l:
+    i3 = l.index(x) + 1
+if ans1 == 0:
     print(-1)
+else:
+    print(ans1, min(i1, i2, i3))
+

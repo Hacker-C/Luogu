@@ -19,10 +19,6 @@ for i in range(26):
 m = 26
 n = x + 1
 
-# for i in temp:
-#     for j in i:
-#         print(j, end='')
-#     print()
 
 ans = [[' ' for i in range(m)] for j in range(n)]
 for i in range(m):
