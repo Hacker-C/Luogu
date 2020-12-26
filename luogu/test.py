@@ -1,3 +1,3 @@
-a = int(input().strip('\n\r'))
-b = int(input().strip('\n\r'))
-print(a + b)
+n = int(input())
+ans = (1+n)*n//2
+print(ans)
