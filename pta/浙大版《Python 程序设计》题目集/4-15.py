@@ -7,4 +7,4 @@ for fen5 in range(19, 0,-1):
             print("fen5:{}, fen2:{}, fen1:{}, total:{}"
                   .format(fen5,fen2,fen1,fen5+fen2+fen1))
             count+=1
-print("count={}".format(count))
+print("count = {}".format(count))
