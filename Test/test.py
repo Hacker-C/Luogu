@@ -1,2 +1,5 @@
-print('\n'.join([''.join([('Love'[(x - y) % len('Love')] if ((x * 0.05) ** 2 + (y * 0.1) ** 2 - 1) ** 3 - (
-            x * 0.05) ** 2 * (y * 0.1) ** 3 <= 0 else ' ') for x in range(-30, 30)]) for y in range(30, -30, -1)]))
+from functools import reduce
+
+nums = [1, 2, 3, 4, 5]
+sm = reduce(lambda x, y: x + y, nums)
+print(sm)
