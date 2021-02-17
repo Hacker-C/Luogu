@@ -1,11 +1,12 @@
-a, b, c = 1, 1, 2
+def isPalindromeString(s: str):
+    start = 0
+    end = len(s) - 1
+    while start < end:
+        if s[start] != s[end]:
+            return False
+        start += 1
+        end -= 1
+    return True
 
-if a == b:
-    print('a==b')
-if b != c:
-    print('b!=c')
 
-
-def func(x: int, y: int) -> int:
-    return x + y
-
+print(isPalindromeString('123457654321'))
