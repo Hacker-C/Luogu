@@ -1,12 +1,11 @@
-def permutations(arr, position, end):
-    if position == end:
-        print(arr)
-    else:
-        for index in range(position, end):
-            arr[index], arr[position] = arr[position], arr[index]
-            permutations(arr, position + 1, end)
-            arr[index], arr[position] = arr[position], arr[index]
+nums = [16, 36, 49, 64]
 
 
-arr = ["a", "b", "c"]
-permutations(arr, 0, len(arr))
+def f(x):
+    print('运行了函数f(x)1次。')
+    return x ** 0.5
+
+
+print([n for i in nums if (n := f(i)) > 5])
+
+print([f(i) for i in nums if f(i) > 5])
