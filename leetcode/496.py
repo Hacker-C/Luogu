@@ -1,5 +1,8 @@
 nums1 = [2,4]
 nums2 = [1,2,3,4]
+#[4,1,2]
+#[1,2,3,4]
+
 ans = []
 k = 0
 for e in nums1:
@@ -9,7 +12,7 @@ for e in nums1:
             k = j
             break
     for e2 in nums2[k+1:]:
-        if e2 > 2:
+        if e2 > e:
             ans.append(e2)
             flag = False
             break
