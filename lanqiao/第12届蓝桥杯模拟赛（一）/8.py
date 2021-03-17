@@ -1,11 +1,15 @@
-# 尚存疑惑
-w = 'LANQIAO'
-w = 'AAB'
-t = 1
-for i in range(t):
-    if w[0] > w[1]:
-        w = w.replace(w[0], '', 1)
-    else:
-        w = w.replace(w[1], '', 1)
-print(w)
+a = 'LANQIAO'
+a = 'AAB'
+b = 1
+while b:
+    d = 0
+    c = []
+    b -= 1
+    for i in range(len(a)):
+        f = a[:d] + a[d+1:]
+        c.append(f)
+        print(c)
+        d += 1
+    a = min(c)
+print(a)
     
